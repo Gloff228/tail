@@ -11,5 +11,10 @@ repositories {
 
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.4")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:1.6.10")
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 

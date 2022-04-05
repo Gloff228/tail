@@ -76,9 +76,9 @@ fun output(list: List<String>, outputFile: String) {
         for (line in list) println(line)
     } else {
         val writer = File(outputFile).bufferedWriter()
-        for (line in list) {
-            writer.write(line)
-            writer.newLine()
+        for (line in list.indices) {
+            writer.write(list[line])
+            if (line != list.size - 1) writer.newLine()
         }
         writer.close()
     }
